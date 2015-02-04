@@ -25,5 +25,8 @@ If you want to add multiple scrollable panes to a document just do as in the fol
 ## Support
 Do you like the stuff? Use it, spread it, modify it and extend it.
 
-- But what if I literally LOVE the snippet?
+> — But what if I literally LOVE the snippet?
+
 yeah, than... <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LRS5X7EETUJUQ" target="_blank">buy me a beer or something</a>
+
+![unnamed](https://cloud.githubusercontent.com/assets/10234530/6038802/b58f845c-ac60-11e4-922f-ca3615568e89.png)
