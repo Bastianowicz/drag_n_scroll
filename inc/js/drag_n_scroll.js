@@ -11,7 +11,7 @@
  * jQuery-Selector to bind the Drag-Behaivour
  * @type {string}
  */
-var context = "html";
+var context = document;
 
 /**
  * Speed-Factor for scrollspeed
@@ -67,7 +67,8 @@ var scrollSpeed = 1;
          * Bind the events
          */
         this.init = function () {
-            that.$context.addClass("dragable");
+            var DOMelement = that.$context.is(document) ? $("body") : that.$context; // Patch if target is document
+            DOMelement.addClass("dragable");
             that.$context.mousedown(function (e) {
                 e.preventDefault();
                 scrollPos = {
@@ -77,13 +78,13 @@ var scrollSpeed = 1;
                 startClickPos.x = e.clientX;
                 startClickPos.y = e.clientY;
                 clicked = true;
-                that.$context.addClass("dragging");
+                DOMelement.addClass("dragging");
             });
 
             $(document).mouseup(function (e){
                 e.preventDefault();
                 clicked = false;
-                that.$context.removeClass("dragging");
+                DOMelement.removeClass("dragging");
                 startClickPos = {x:0,y:0};
             });
 
