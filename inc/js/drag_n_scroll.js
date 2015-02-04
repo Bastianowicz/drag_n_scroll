@@ -11,7 +11,7 @@
  * jQuery-Selector to bind the Drag-Behaivour
  * @type {string}
  */
-var context = "body";
+var context = "html";
 
 /**
  * Speed-Factor for scrollspeed
@@ -71,8 +71,8 @@ var scrollSpeed = 1;
             that.$context.mousedown(function (e) {
                 e.preventDefault();
                 scrollPos = {
-                    x: that.$context.parent().scrollLeft(),
-                    y: that.$context.parent().scrollTop()
+                    x: that.$context.scrollLeft(),
+                    y: that.$context.scrollTop()
                 };
                 startClickPos.x = e.clientX;
                 startClickPos.y = e.clientY;
@@ -110,8 +110,8 @@ var scrollSpeed = 1;
                     y: startClickPos.y - currentMouse.y
                 };
 
-                that.$context.parent().scrollTop(scrollPos.y + scrollSpeed * (delta.y));
-                that.$context.parent().scrollLeft(scrollPos.x + scrollSpeed * (delta.x));
+                that.$context.scrollTop(scrollPos.y + scrollSpeed * (delta.y));
+                that.$context.scrollLeft(scrollPos.x + scrollSpeed * (delta.x));
             }
         }
     };
@@ -121,6 +121,7 @@ var scrollSpeed = 1;
      */
     $(document).ready(function(){
         if(typeof bastianowicz == "undefined") bastianowicz = {};
+        bastianowicz.Drag_n_Scroll = drag_n_scroll;
         bastianowicz.drag_n_scroll = new drag_n_scroll();
         bastianowicz.drag_n_scroll.$context = $(context);
         bastianowicz.drag_n_scroll.init();
