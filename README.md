@@ -1,4 +1,4 @@
-# drag_n_scroll
+# drag and scroll
 Javascript tool to make element dragable by drag &amp; scroll
 
 ## Requirements
@@ -8,3 +8,6 @@ Javascript tool to make element dragable by drag &amp; scroll
 1. Include drag_n_scroll.css
 2. Include drag_n_scroll.js
 3. Set config (HTML-context and speed) in drag_n_scroll.js
+
+## Example
+http://bastianowicz.github.io/drag_n_scroll/

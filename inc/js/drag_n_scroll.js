@@ -3,6 +3,10 @@
  * on 21.12.2014.
  */
 
+ ///////////////////////////////////////////////////////////////////
+ // START OF CONFIG                                               //
+ ///////////////////////////////////////////////////////////////////
+
 /**
  * jQuery-Selector to bind the Drag-Behaivour
  * @type {string}
@@ -14,6 +18,12 @@ var context = "body";
  * @type {number}
  */
 var scrollSpeed = 1;
+
+ ///////////////////////////////////////////////////////////////////
+ // END OF CONFIG                                                 //
+ ///////////////////////////////////////////////////////////////////
+
+
 
 // self-calling anonymous function
 (function(context) {
@@ -64,8 +74,8 @@ var scrollSpeed = 1;
                     x: that.$context.parent().scrollLeft(),
                     y: that.$context.parent().scrollTop()
                 };
-                startClickPos.x = e.screenX;
-                startClickPos.y = e.screenY;
+                startClickPos.x = e.clientX;
+                startClickPos.y = e.clientY;
                 clicked = true;
                 that.$context.addClass("dragging");
             });
@@ -80,6 +90,7 @@ var scrollSpeed = 1;
             $(window).mousemove(function(e){
                 scroll(e);
             });
+
         };
 
         /**
