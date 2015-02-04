@@ -1,0 +1,11 @@
+/*
+ * Created by Bastian Charlet
+ * on 04.02.2015
+ */
+
+.dragable{
+ 	cursor: url(img/cursor/dragable.cur),url(../../img/cursors/dragable.cur),default;
+ }
+.dragable.dragging{
+ cursor: url(img/cursor/dragging.cur),url(../../img/cursors/dragging.cur),default;
+}
