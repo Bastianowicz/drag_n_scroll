@@ -1,5 +1,5 @@
 # drag and scroll
-Javascript tool to make element dragable by drag &amp; scroll
+Javascript tool that uses dragging to scroll any element. Unlike other plugins this causes real scrolling instead of changing margin or position. Use this plugin as addition to default scrolling. This also works out with touch interfaces.
 
 ## Requirements
 * jQuery installed
